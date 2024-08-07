@@ -15,3 +15,5 @@ export function mapStrings(
 const abc = ['a', 'b', 'c'];
 const abcMap = mapStrings(abc, (item) => item.toUpperCase());
 console.log(abcMap);
+
+export default 1;
