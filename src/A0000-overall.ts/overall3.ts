@@ -131,7 +131,7 @@ class MedievalAdventure {
             Characterclass: 'Dwarf',
             CharacterPower: 'Walk around',
             CharacterWeapon: 'butterfly net',
-        }
+        };
 
         console.log(userCharacter);
 
@@ -139,7 +139,27 @@ class MedievalAdventure {
 
 }
 
-const adventure = new MedievalAdventure();
-adventure.checkUser(); 
+/* const adventure = new MedievalAdventure();
+adventure.checkUser(); */
+
+function chooseRGB (color: 'Red' | 'Green' | 'Blue') {
+    if (!color) throw new Error('Choose a proper value');
+    return color;
+}
+
+// console.log(chooseRGB('Green')); O parâmetro "color" engloba até três termos. Red, Blue e Green.
+
+type RGB_Colors = 'Red' | 'Green' | 'Blue';
+type MYK_Colors = 'Yellow' | 'Magenta';
+type RGB_MYK = RGB_Colors | MYK_Colors;
+
+const paintingtheView: {
+    paintingName: string, color: RGB_MYK | null
+} = {
+    paintingName: 'Sunflower',
+    color: 'Blue',
+}
+
+// console.log(paintingtheView.paintingName, paintingtheView.color);
 
 export default 1;
