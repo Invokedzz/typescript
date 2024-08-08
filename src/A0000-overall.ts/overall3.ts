@@ -162,4 +162,6 @@ const paintingtheView: {
 
 // console.log(paintingtheView.paintingName, paintingtheView.color);
 
+
+
 export default 1;
