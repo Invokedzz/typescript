@@ -27,3 +27,5 @@ export class Person {
 const someGuy = new Person('David', 'Guetta', 10, '123-456-798-00');
 someGuy.setCPF('123-456-798-00');
 console.log(someGuy.getCPF());
+
+export default 1;
