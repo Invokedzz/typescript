@@ -45,3 +45,5 @@ export class Rectangle {
 
 const damnIloveRectangles = new Rectangle('*****');
 damnIloveRectangles.rectanLoop();
+
+export default 1;
