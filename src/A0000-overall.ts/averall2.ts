@@ -27,3 +27,21 @@ export class happyTriangle {
 const startingtheTriangle = new happyTriangle('*', '*******');
 startingtheTriangle.creatingtheTriangle();
 startingtheTriangle.creatingmoreTriangles();
+
+export class Rectangle {
+    constructor (
+        private rectangle: string,
+    ) {};
+
+    public rectanLoop () {
+        let limitRectangle = 10;
+        console.log("Sou o retângulo opressor!");
+        for (let jamesLebron = 0; jamesLebron <= limitRectangle; jamesLebron++) {
+            console.log(this.rectangle);
+        }
+    };
+
+};
+
+const damnIloveRectangles = new Rectangle('*****');
+damnIloveRectangles.rectanLoop();
