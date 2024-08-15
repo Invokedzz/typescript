@@ -1,4 +1,4 @@
-export class definingCity {
+export abstract class definingCity {
     constructor (
         private country: string,
         private capital: string,
@@ -37,6 +37,7 @@ export class newElement extends definingCity {
     };
 }
 
-const city = new definingCity('Spain', 'Madrid', 100000);
 const element = new newElement('France', 'Paris', 160000);
 console.log(element.showEverything());
+
+// Usamos abstract para aquelas classes que vão fornecer "unicamente" propriedades.
