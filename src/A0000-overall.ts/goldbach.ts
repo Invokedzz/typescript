@@ -6,27 +6,24 @@
 
 export class testePrimalidade {
     constructor (
-        private m: number,
-        private n: number,
+        private m: number [], // Divisores
+        private n: number, // Primos
     ) {};
 
-    public validatingPrimalidade(proporcionalidadeAlgoritmo: number) {
-        if (this.m < 4 || this.n <= 1) return 'Insira um valor maior';
-        let limit = proporcionalidadeAlgoritmo;
-        for (let iterableValue = 1; iterableValue <= limit; iterableValue += 1) {
-            if (this.m >= 2 && this.m <= Math.sqrt(this.n)) {
-               const NMvalue = this.n % this.m;
-               if (NMvalue !== 0) {
-                    console.log('N é primo!');
-                    return this.n;
-               };
-               this.m += iterableValue;
+    public validatingPrimalidade(listadeValores: number []) {
+        this.m = [];
+        let limit = Math.sqrt(this.n);
+        for (let value of listadeValores) {
+            if (value > 1 && this.n % value === 0 && value <= limit) {
+                this.m.push(value);
+                const newValues = this.m.filter((values) => values % this.n !== 0);
+                console.log(newValues);
             };
-        }; // Primeiro valor obtido: N. Preciso de outro valor: então teremos que aplicar essa lógica 2x.
-        // Posso fazer iterando vários valores diferentes de M, ou fazer de uma forma mais "estática".
+        }
+        return;
     }    
 }
 
-const callClass = new testePrimalidade(10, 0);
-callClass.validatingPrimalidade(100);
+const callClass = new testePrimalidade([], 100);
+callClass.validatingPrimalidade([2, 3, 4, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97]);
 export default 1;
