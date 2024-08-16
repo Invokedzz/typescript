@@ -40,4 +40,4 @@ export class newElement extends definingCity {
 const element = new newElement('France', 'Paris', 160000);
 console.log(element.showEverything());
 
-// Usamos abstract para aquelas classes que vão fornecer "unicamente" propriedades.
+// Usamos abstract para aquelas classes que vão fornecer "unicamente" propriedades._
