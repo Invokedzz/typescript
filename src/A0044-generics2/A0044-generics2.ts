@@ -12,3 +12,4 @@ function giveaPromise (): Promise <number> {
 }
 
 giveaPromise().then((data) => console.log(data + 1));
+export default 1;
