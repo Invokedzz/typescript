@@ -50,7 +50,8 @@ export class votingTime {
     };
 
 
-    public analyseCounters (firstChallenger: string, secondChallenger: string): string {
+    public analyseCounters (firstChallenger: string, secondChallenger: string): string | boolean {
+        if (!this.counter || !this.counter2) return false;
         if (this.counter > this.counter2) return `${firstChallenger} is the winner!`;
         return `${secondChallenger} is the winner!`;
     };
