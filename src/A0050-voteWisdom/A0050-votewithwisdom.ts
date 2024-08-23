@@ -7,9 +7,8 @@ export class votingTime {
 
     public letsVote (participants: string []): string [] | boolean {
         this.arrayPublic = [];
-        let limit = 5;
-        for (let i = 0; i <= limit; i++) {
-            if (i >= limit) break;
+        for (let i = 0; i <= participants.length; i++) {
+            if (i >= participants.length) break;
             if (this.arrayPublic.includes(participants[i])) return false;
             this.arrayPublic.push(participants[i]);
             console.log(this.arrayPublic);
@@ -22,7 +21,7 @@ export class votingTime {
     public firstOption (firstChallenger: string, value: number): boolean | number {
         if (this.arrayPublic.length > 0) {
             const numbersofVote = value;
-            for (let i = 0; i <= numbersofVote; i++) {
+            for (let i = 0; i < numbersofVote; i++) {
                 this.counter += 1;
             };
             console.log(`${firstChallenger} has a total of ${this.counter} votes`);
@@ -36,7 +35,7 @@ export class votingTime {
     public secondOption (secondChallenger: string, value: number): boolean | number {
         if (this.arrayPublic.length > 0) {
             const numbersofVote2 = value;
-            for (let i = 0; i <= numbersofVote2; i++) {
+            for (let i = 0; i < numbersofVote2; i++) {
                 this.counter2 += 1;
             };
 
@@ -51,7 +50,7 @@ export class votingTime {
 
 
     public analyseCounters (firstChallenger: string, secondChallenger: string): string | boolean {
-        if (!this.counter || !this.counter2) return false;
+        if (!this.counter && !this.counter2) return false;
         if (this.counter > this.counter2) return `${firstChallenger} is the winner!`;
         return `${secondChallenger} is the winner!`;
     };
