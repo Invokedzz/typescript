@@ -18,3 +18,5 @@ export class Person {
 
 const startAll = new Person('Pablo Honey');
 console.log(startAll.returnName());
+
+export default 1;
