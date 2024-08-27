@@ -37,3 +37,5 @@ namespace anotherNamespace {
 
 const startNamespace = new anotherNamespace.sum(1, 3);
 startNamespace.showSum();
+
+export default 1;
